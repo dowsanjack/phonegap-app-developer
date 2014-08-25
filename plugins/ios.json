@@ -17,6 +17,10 @@
                         {
                             "xml": "false",
                             "count": 9
+                        },
+                        {
+                            "xml": "true",
+                            "count": 2
                         }
                     ],
                     "CoreMotion.framework": [
@@ -40,17 +44,21 @@
                     "CoreGraphics.framework": [
                         {
                             "xml": "false",
-                            "count": 16
+                            "count": 17
+                        },
+                        {
+                            "xml": "true",
+                            "count": 1
                         }
                     ],
                     "SystemConfiguration.framework": [
                         {
                             "xml": "true",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "false",
-                            "count": 1
+                            "count": 2
                         }
                     ],
                     "AddressBook.framework": [
@@ -74,6 +82,66 @@
                     "libsqlite3.dylib": [
                         {
                             "xml": "false",
+                            "count": 2
+                        }
+                    ],
+                    "AVFoundation.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "CoreMedia.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "CoreVideo.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "QuartzCore.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "libz.dylib": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "CFNetwork.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "Foundation.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "Security.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "UIKit.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "CoreTelephony.framework": [
+                        {
+                            "xml": "true",
                             "count": 1
                         }
                     ]
@@ -177,6 +245,30 @@
                         {
                             "xml": "<feature name=\"ADBMobile_PhoneGap\"><param name=\"ios-package\" value=\"ADBMobile_PhoneGap\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Appsee\"><param name=\"ios-package\" value=\"CDVAppsee\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ImagePicker\"><param name=\"ios-package\" value=\"SOSPicker\" /></feature>",
+                            "count": 1
+                        }
+                    ],
+                    "/widget": [
+                        {
+                            "xml": "<feature name=\"PushNotificationPlugin\"><param name=\"ios-package\" value=\"PushNotificationPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Info.plist": {
+                "parents": {
+                    "CFBundleURLTypes": [
+                        {
+                            "xml": "<array><dict><key>CFBundleURLSchemes</key><array><string>poetic-dev</string></array></dict></array>",
+                            "count": 1
                         }
                     ]
                 }
@@ -242,6 +334,19 @@
             "PACKAGE_NAME": "com.adobe.phonegap.app"
         },
         "ADBMobile": {
+            "PACKAGE_NAME": "com.adobe.phonegap.app"
+        },
+        "com.appsee.plugin": {
+            "PACKAGE_NAME": "com.adobe.phonegap.app"
+        },
+        "com.synconset.imagepicker": {
+            "PACKAGE_NAME": "com.adobe.phonegap.app"
+        },
+        "com.urbanairship.phonegap.PushNotification": {
+            "PACKAGE_NAME": "com.adobe.phonegap.app"
+        },
+        "nl.x-services.plugins.launchmyapp": {
+            "URL_SCHEME": "poetic-dev",
             "PACKAGE_NAME": "com.adobe.phonegap.app"
         }
     },
