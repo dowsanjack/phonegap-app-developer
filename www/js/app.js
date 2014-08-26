@@ -81,7 +81,7 @@ function loadConfig(callback) {
         config = parseAsJSON(text);
 
         // load defaults
-        config.address = config.address || '127.0.0.1:3000';
+        config.address = config.address || 'localhost:4200';
 
         // load server address
         if (config.address) {
@@ -274,35 +274,19 @@ function onBuildSubmitError(message) {
 }
 
 function registerWithServer() {
-    $.ajax({
-        type: 'POST',
-        url: getAddress('/__api__/register'),
-        dataType: 'json',
-        data: {
-            platform: device.platform,
-            version: device.cordova
-        },
-        timeout: 1000 * 10,
-        success: function(data) {
-            onBuildSubmitSuccess();
-        },
-        error: function(xhr, type) {
-            // support older servers that do not support /register
-            $.ajax({
-                type: 'GET',
-                url: getAddress(),
-                dataType: 'text',
-                timeout: 1000 * 10,
-                success: function(data) {
-                    onBuildSubmitSuccess();
-                },
-                error: function(xhr, type) {
-                    onBuildSubmitError();
-                }
-            });
-
-        }
-    });
+  // support older servers that do not support /register
+  $.ajax({
+      type: 'GET',
+      url: getAddress(),
+      dataType: 'text',
+      timeout: 1000 * 10,
+      success: function(data) {
+          onBuildSubmitSuccess();
+      },
+      error: function(xhr, type) {
+          onBuildSubmitError();
+      }
+  });
 }
 
 function getAddressField() {
